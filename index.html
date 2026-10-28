@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa Velha Antiguidades</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topo">
+  <a class="marca" href="#">Casa Velha</a>
+  <nav>
+    <a href="#acervo">Acervo</a>
+    <a href="#sobre">Como funciona</a>
+    <button id="abrirCarrinho" class="btn-carrinho">Sacola <span id="contador">0</span></button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Cada peça já teve outra casa.</h1>
+  <p>Discos, vitrolas, máquinas de escrever e móveis com história. Todas as peças são únicas, revisadas e vendidas com laudo de estado.</p>
+  <a class="btn" href="#acervo">Ver o acervo</a>
+</section>
+
+<main id="acervo">
+  <div class="filtros">
+    <input type="search" id="busca" placeholder="Buscar por nome ou década" aria-label="Buscar">
+    <div id="categorias" class="chips"></div>
+    <select id="ordem" aria-label="Ordenar">
+      <option value="antigo">Mais antigas primeiro</option>
+      <option value="menor">Menor preço</option>
+      <option value="maior">Maior preço</option>
+    </select>
+  </div>
+  <div id="grade" class="grade"></div>
+  <p id="vazio" class="vazio" hidden>Nenhuma peça encontrada. Limpe a busca ou escolha outra categoria.</p>
+</main>
+
+<section id="sobre" class="sobre">
+  <div><h3>Peça única</h3><p>Cada item existe em uma unidade. Quando alguém reserva, ele sai do acervo.</p></div>
+  <div><h3>Laudo de estado</h3><p>Dizemos o que funciona, o que foi restaurado e o que mostra marcas do tempo.</p></div>
+  <div><h3>Embalagem especial</h3><p>Enviamos para todo o Brasil em caixa reforçada, com seguro.</p></div>
+</section>
+
+<footer>Casa Velha Antiguidades · Curitiba, PR · contato@casavelha.example</footer>
+
+<div id="fundo" class="fundo" hidden></div>
+<aside id="gaveta" class="gaveta" aria-label="Sacola" aria-hidden="true">
+  <div class="gaveta-topo"><h2>Sua sacola</h2><button id="fechar" aria-label="Fechar">✕</button></div>
+  <ul id="itens"></ul>
+  <div class="gaveta-rodape">
+    <p>Total <strong id="total">R$ 0,00</strong></p>
+    <button id="finalizar" class="btn">Reservar peças</button>
+    <button id="limpar" class="link">Esvaziar sacola</button>
+  </div>
+</aside>
+<div id="aviso" class="aviso" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
